@@ -9,6 +9,7 @@ function App() {
           <ul class="Navigation">
             <li> <a href="#"> Login </a></li>
             <li> <a href="#"> Help </a></li>
+            <li> <a href="#"> Course Outlines </a></li>
           </ul>
       </div>
       
