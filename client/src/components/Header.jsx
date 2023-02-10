@@ -12,6 +12,7 @@ function Header (){
             <nav>
                 <Link to = "/">Login</Link> |{"  "}
                 <Link to = "/home">Home</Link>|{"  "}
+                <Link to = "/help"> Help</Link> | {" "}
             </nav>
         
         </div>
@@ -19,3 +20,4 @@ function Header (){
 };
 
 export default Header;
+
