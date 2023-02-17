@@ -20,7 +20,7 @@ const accountSchema = new Schema({
     },
     "role": {
         type: String,
-        default: 'Instructure'
+        default: 'Instructor'
     },
 });
 
