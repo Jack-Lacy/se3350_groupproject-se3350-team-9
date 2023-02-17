@@ -44,7 +44,7 @@ function App() {
         component props we passes the imported component*/}
         <Route path="/Help" element={<Help/>} />
 
-        <Route path="/Login" element={<Help/>} />
+        <Route path="/Login" element={<Login/>} />
    
         {/* If any route mismatches the upper 
         route endpoints then, redirect triggers 
