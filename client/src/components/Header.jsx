@@ -10,7 +10,7 @@ function Header (){
 
             <h4> Options </h4>
             <nav>
-                <Link to = "/">Login</Link> |{"  "}
+                <Link to = "/login">Login</Link> |{"  "}
                 <Link to = "/home">Home</Link>|{"  "}
                 <Link to = "/help"> Help</Link> | {" "}
             </nav>
