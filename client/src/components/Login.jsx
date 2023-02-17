@@ -100,7 +100,7 @@ function Login (){
         {isSubmitted ? <div>User is successfully logged in</div> : renderForm}
       </div>
 
-      <Link to = "/login">Sign-up</Link> |{"  "}
+      <Link to = "/Sign-up">Sign-up</Link> |{"  "}
 
 
         </div>

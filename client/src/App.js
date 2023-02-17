@@ -20,6 +20,7 @@ import Login from './components/Login';
 
 import Header from './components/Header';
 import Help from './components/Help';
+import Signup from './components/Sign-Up';
 
 
 function App() {
@@ -48,6 +49,7 @@ function App() {
 
         <Route path="/Login" element={<Login/>} />
    
+        <Route path="/Sign-up" element={<Signup/>} />
         {/* If any route mismatches the upper 
         route endpoints then, redirect triggers 
         and redirects app to home component with to="/" */}
