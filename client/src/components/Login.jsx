@@ -100,10 +100,6 @@ function Login (){
         {isSubmitted ? <div>User is successfully logged in</div> : renderForm}
       </div>
 
-            <h1>Login Page</h1>
-            <Header>
-            </Header>
-
         
 
 
