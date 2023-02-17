@@ -12,10 +12,12 @@ import { Link } from 'react-router-dom';
 /*
 import {BrowserRouter as Router} from "react-router-dom"
 */
+import { redirect } from 'react-router-dom';
+
 import { Navigate } from 'react-router-dom';
 import Home from './components/Home'
 import Login from './components/Login';
-import { redirect } from 'react-router-dom';
+
 import Header from './components/Header';
 import Help from './components/Help';
 
@@ -44,7 +46,7 @@ function App() {
         component props we passes the imported component*/}
         <Route path="/Help" element={<Help/>} />
 
-        <Route path="/Login" element={<Help/>} />
+        <Route path="/Login" element={<Login/>} />
    
         {/* If any route mismatches the upper 
         route endpoints then, redirect triggers 
