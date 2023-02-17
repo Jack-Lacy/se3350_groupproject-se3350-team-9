@@ -10,7 +10,7 @@ const accountSchema = new Schema({
         type: String,
         require: true
     },
-    "email": {
+    "username": {
         type: String,
         require: true
     },
