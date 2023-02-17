@@ -89,6 +89,7 @@ function Login (){
         <div>
 
         
+
             <h1>Login Page
 
             <Header></Header>
@@ -98,6 +99,11 @@ function Login (){
         <div className="title">Sign In</div>
         {isSubmitted ? <div>User is successfully logged in</div> : renderForm}
       </div>
+
+            <h1>Login Page</h1>
+            <Header>
+            </Header>
+
         
 
 
