@@ -90,17 +90,17 @@ function Login (){
 
         
 
-            <h1>Login Page
+            <h1>Sign-Up Page
 
             <Header></Header>
             </h1>
   
             <div className="login-form">
-        <div className="title">Sign In</div>
+        <div className="title">Sign Up</div>
         {isSubmitted ? <div>User is successfully logged in</div> : renderForm}
       </div>
 
-      <Link to = "/Sign-up">Sign-up</Link> |{"  "}
+      <Link to = "/login">Already have an account? Log in</Link> |{"  "}
 
 
         </div>
