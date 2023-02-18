@@ -1,13 +1,16 @@
 const express = require('express');
 const jwt = require('jsonwebtoken');
-const cors = require("cors");
-const bcrypt = require("bcrypt");
+const cors = require('cors');
+const bcrypt = require('bcrypt');
+const passport = require('passport');
 const port = 3000;
 
 const Account = require('./database-schema/account');
 
 const {saveData, findAll, checkExist, update, deleteOne, findOneStr} = require('./databse');
+const initPassport = require('./passport-config');
 
+initPassport(passport);
 
 const app = express();
 app.use(cors());
@@ -29,15 +32,40 @@ app.get('/', (req,res) => {
 })
 
 app.post('/login', (req, res) => {
-    const username = req.body.email;
-    const password = req.body.password;
 
-    findOneStr("account", username, password);
+    try {
+        const username = req.body.email;
+        const password = req.body.password;
+
+        findOneStr("account", username, password);
+
+
+    } catch (error) {
+        
+    }
+
+    
 
 })
 
 app.get('/signup', (req, res) => {
-    
+
+    try {
+        
+        const encryptPsw = bcrypt.hash(req.body.password, 10);
+
+        const acc = new Account({
+        'firstName': `${req.body.firstName}`,
+        'lastName': `${req.body.lastName}`,
+        'username': `${req.body.username}`,
+        'password': `${encryptPsw}`,
+        'role': 'instructor'
+    })
+
+    saveData(acc);
+    } catch (error) {
+        
+    }
 })
 
 
