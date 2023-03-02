@@ -3,6 +3,8 @@ const jwt = require('jsonwebtoken');
 const cors = require('cors');
 const bcrypt = require('bcrypt');
 const passport = require('passport');
+const flash = requier('express-flash');
+
 const port = 3000;
 
 const Account = require('./database-schema/account');
@@ -10,11 +12,15 @@ const Account = require('./database-schema/account');
 const {saveData, findAll, checkExist, update, deleteOne, findOneStr} = require('./databse');
 const initPassport = require('./passport-config');
 
-initPassport(passport);
+initPassport(
+    passport, 
+    username => username);
 
 const app = express();
 app.use(cors());
 app.use(express.json())
+app.use
+
 
 app.get('/', (req,res) => {
 
