@@ -2,6 +2,8 @@ import React from "react";
 import Header from "../components/Header"
 import ReactDOM from 'react-dom';
 import { createRoot } from 'react-dom/client';
+import ReactQuill from 'react-quill';
+import 'react-quill/dist/quill.snow.css';
 
 // importing Link from react-router-dom to navigate to
 // different end points.
@@ -21,6 +23,9 @@ function Home  (){
 
                 </Header>
             </h1>
+            <ReactQuill
+            
+            />
         </div>
     )
 
