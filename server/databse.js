@@ -1,8 +1,6 @@
 const mongoose = require('mongoose');
-const { collection, find } = require('../../database/schema/genre');
-require("dotenv").config();
 
-const uri = `mongodb+srv://root:root@se3350.y4hv9vg.mongodb.net/?retryWrites=true&w=majority`;
+const uri = `mongodb+srv://root:root@se3350.y4hv9vg.mongodb.net/se3350?retryWrites=true&w=majority`;
 mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true})
     .then((result) => console.log('connected to db'))
     .catch((err) => console.log(err))
@@ -47,6 +45,21 @@ function getAll(collection){
 function findAll(collection, param, value){
     return collection.find({
         [param]: value
+    })
+}
+
+
+async function findOneStr(collection, param, value){
+        
+    return await collection.findOne({
+        [param]: { $regex: new RegExp(value, 'i')}
+    }, (err, docs) => {
+        if (err){
+            console.log(err)
+        }
+        else{
+            return docs;
+        }
     })
 }
 
@@ -105,4 +118,4 @@ function checkExist(collection, param, check){
     })
 }
 
-module.exports = {saveData, delData, getAll, findAll, deleteAll, checkExist, update, deleteOne};
+module.exports = {saveData, delData, getAll, findAll, deleteAll, checkExist, update, deleteOne, findOneStr};

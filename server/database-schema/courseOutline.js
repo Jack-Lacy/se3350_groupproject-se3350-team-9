@@ -9,7 +9,7 @@ const courseOutlineSchema = new Schema({
     "year": {
         type: String,
         require: true
-    },
+    }
     
 });
 

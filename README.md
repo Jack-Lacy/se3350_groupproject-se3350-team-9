@@ -1,7 +1,5 @@
-# 3350
+# SE 3350 Team 9 
 Team GitHub Repo for the 3350 software project
-
-## Things to still Consider
 
 ## Frontend
 The web-app's frontend uses React.
@@ -26,6 +24,12 @@ The web-app's backend server uses Express.js and Mongoose to connect to the Mong
 
 - Python
     - If there is a need to do any data manipulation, it might be worth looking into using Python as it provides more data manipulation capabilities.
+
+- PDF Creation & Storage
+    - We will need to find a way to take in the user inputs and create pdfs for it
+        -    
+    - We will also need to store and retrive these pdf
+        - It might be good to take advantage of GCP Cloud storage for this
 
 
 
